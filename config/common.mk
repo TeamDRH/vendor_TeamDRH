@@ -29,9 +29,7 @@ PRODUCT_COPY_FILES += \
     vendor/TeamDRH/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
 PRODUCT_COPY_FILES +=  \
-    vendor/TeamDRH/proprietary/Term.apk:system/app/Term.apk \
-    vendor/TeamDRH/proprietary/lib/armeabi/libjackpal-androidterm3.so:system/lib/libjackpal-androidterm3.so \
-    vendor/TeamDRN/prebuilt/common/bootanimation.zip:system/media/bootanimation.zip
+    vendor/TeamDRH/prebuilt/common/bootanimation.zip:system/media/bootanimation.zip
   	
 
 # Enable SIP+VoIP on all targets
