@@ -28,8 +28,8 @@ PRODUCT_COPY_FILES += \
     vendor/TeamDRH/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/TeamDRH/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
-PRODUCT_COPY_FILES +=  \
-    vendor/TeamDRH/prebuilt/common/bootanimation.zip:system/media/bootanimation.zip
+#PRODUCT_COPY_FILES +=  \
+#    vendor/TeamDRH/prebuilt/common/bootanimation.zip:system/media/bootanimation.zip
   	
 
 # Enable SIP+VoIP on all targets
