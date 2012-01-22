@@ -125,6 +125,12 @@ $SED -i \
 	-e '/ro\.build\.type/s/eng/user/' \
 	$REPACK/ota/system/build.prop
 
+# Delete device specific files
+if [ -f $ANDROID_BUILD_TOP/vendor/TeamDRH/tools/squisher.rm ]; then
+	for RM_FILE in `cat $ANDROID_BUILD_TOP/vendor/TeamDRH/tools/squisher.rm`; do
+		rm -f $REPACK/ota/$RM_FILE
+	done
+fi
 
 # Delete unnecessary binaries
 ( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
