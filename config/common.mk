@@ -28,8 +28,8 @@ PRODUCT_COPY_FILES += \
     vendor/TeamDRH/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/TeamDRH/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
-#PRODUCT_COPY_FILES +=  \
-#    vendor/TeamDRH/prebuilt/common/bootanimation.zip:system/media/bootanimation.zip
+PRODUCT_COPY_FILES +=  \
+    vendor/TeamDRH/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
   	
 
 # Enable SIP+VoIP on all targets
@@ -38,12 +38,10 @@ PRODUCT_COPY_FILES += \
 
 # Required CM packages
 PRODUCT_PACKAGES += \
-    Camera \
     Development \
     LatinIME \
     SpareParts \
     Superuser \
-    Superuser.apk \
     su
 
 # Optional CM packages
@@ -56,6 +54,7 @@ PRODUCT_PACKAGES += \
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
+    Launcher2 \
     Trebuchet \
     DSPManager \
     libcyanogen-dsp \
@@ -63,10 +62,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/ui
 
-PRODUCT_VERSION_MAJOR = 4
+PRODUCT_VERSION_MAJOR = BETA
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = 3-RC0
+PRODUCT_VERSION_MAINTENANCE = 2
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=ITL41D
 
