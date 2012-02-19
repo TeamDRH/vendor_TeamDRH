@@ -16,11 +16,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false
 
 PRODUCT_COPY_FILES += \
-    vendor/TeamDRH/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh
+    vendor/TeamDRH/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/TeamDRH/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/TeamDRH/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/TeamDRH/prebuilt/common/bin/sysinit:system/bin/sysinit \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/04modules:system/etc/init.d/04modules \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/20userinit:system/etc/init.d/20userinit
+
+# terminfo
+PRODUCT_COPY_FILES += \
+    vendor/TeamDRH/prebuilt/common/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
+    vendor/TeamDRH/prebuilt/common/etc/terminfo/u/unknown:system/etc/terminfo/unknown
+
 
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
@@ -64,12 +75,12 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/ui
 
-PRODUCT_VERSION_MAJOR = BETA
-PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = 2
+PRODUCT_VERSION_MAJOR = AOKP
+PRODUCT_VERSION_MINOR = Preview
+PRODUCT_VERSION_MAINTENANCE = 2A
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=ITL41D
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=TeamDRH-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date +%0d%^b%Y-%H%M%S)
+    ro.modversion=TeamDRH-$(PRODUCT_VERSION_MAJOR)-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date +%0d%^b%Y-%H%M%S)
 
