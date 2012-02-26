@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="application_name">DRHLauncher</string>
+    <string name="workspace_cling_title">Welcome to TeamDRH ICS!</string>
+    <string name="workspace_cling_move_item">Get ready for a new experience...</string>
+    <string name="workspace_cling_open_all_apps">Touch the circle, and hold on tight.</string>
+</resources>
