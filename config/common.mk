@@ -67,7 +67,6 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     Launcher2 \
-    Trebuchet \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf
@@ -77,9 +76,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/ui
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/teamdrh
 
-PRODUCT_VERSION_MAJOR = AOKP
-PRODUCT_VERSION_MINOR = DHD-Preview
-PRODUCT_VERSION_MAINTENANCE = 2A
+PRODUCT_VERSION_MAJOR = ICS
+PRODUCT_VERSION_MINOR = Preview
+PRODUCT_VERSION_MAINTENANCE = 2B
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=ITL41D
 
