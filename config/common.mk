@@ -20,12 +20,40 @@ PRODUCT_COPY_FILES += \
     vendor/TeamDRH/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # init.d support
+#PRODUCT_COPY_FILES += \
+#    vendor/TeamDRH/prebuilt/common/bin/sysinit:system/bin/sysinit \
+#    vendor/TeamDRH/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+#    vendor/TeamDRH/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
+#    vendor/TeamDRH/prebuilt/common/etc/init.d/04modules:system/etc/init.d/04modules \
+#    vendor/TeamDRH/prebuilt/common/etc/init.d/20userinit:system/etc/init.d/20userinit
+
+# InitD support
 PRODUCT_COPY_FILES += \
-    vendor/TeamDRH/prebuilt/common/bin/sysinit:system/bin/sysinit \
-    vendor/TeamDRH/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/TeamDRH/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
-    vendor/TeamDRH/prebuilt/common/etc/init.d/04modules:system/etc/init.d/04modules \
-    vendor/TeamDRH/prebuilt/common/etc/init.d/20userinit:system/etc/init.d/20userinit
+    vendor/TeamDRH/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/05freemem:system/etc/init.d/05freemem \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/09cron:system/etc/init.d/09cron \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
+    vendor/TeamDRH/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
+    vendor/TeamDRH/prebuilt/common/etc/init_trigger.disabled:system/etc/init_trigger.disabled \
+    vendor/TeamDRH/prebuilt/common/etc/init_d.bsh:system/etc/init_d.bsh \
+    vendor/TeamDRH/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf    
+
+# cron support
+PRODUCT_COPY_FILES += \
+    vendor/TeamDRH/prebuilt/common/etc/cron/cron.conf:system/etc/cron/cron.conf \
+    vendor/TeamDRH/prebuilt/common/etc/cron/cron.hourly/00drop_caches:system/etc/cron/cron.hourly/00drop_caches \
+    vendor/TeamDRH/prebuilt/common/etc/cron/cron.daily/00drop_caches:system/etc/cron/cron.daily/00drop_caches \
+    vendor/TeamDRH/prebuilt/common/etc/cron/cron.weekly/00drop_caches:system/etc/cron/cron.weekly/00drop_caches \
+    vendor/TeamDRH/prebuilt/common/etc/cron/cron.hourly/01clear_cache:system/etc/cron/cron.hourly/01clear_cache \
+    vendor/TeamDRH/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
+    vendor/TeamDRH/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache 
+
+
 
 # terminfo
 PRODUCT_COPY_FILES += \
@@ -78,7 +106,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/teamdrh
 
 PRODUCT_VERSION_MAJOR = ICS
 PRODUCT_VERSION_MINOR = Preview
-PRODUCT_VERSION_MAINTENANCE = 2B
+PRODUCT_VERSION_MAINTENANCE = 2C
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=ITL41D
 

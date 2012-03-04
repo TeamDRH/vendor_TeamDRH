@@ -1,9 +1,13 @@
-#!/system/bin/sh
-# execute any postinstall script then kill it
-if [ -e /data/firstboot.sh ];
-then
-   log -p i -t boot "Executing firstboot.sh..";
-   logwrapper /system/bin/sh /data/firstboot.sh;
-   rm -f /data/firstboot.sh;
-fi;
+#!/system/xbin/sh
 
+if [ -e /system/xbin/firstboot.sh ]; then
+   log -p i -t boot "Executing data/firstboot.sh.."
+   sh /system/xbin/firstboot.sh
+   rm -f /system/xbin/firstboot.sh
+fi
+
+if [ -e /data/firstboot.sh ]; then
+   log -p i -t boot "Executing data/firstboot.sh.."
+   sh /data/firstboot.sh
+   rm -f /data/firstboot.sh
+fi
