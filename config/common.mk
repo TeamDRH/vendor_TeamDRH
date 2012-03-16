@@ -41,6 +41,7 @@ PRODUCT_COPY_FILES += \
     vendor/TeamDRH/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
     vendor/TeamDRH/prebuilt/common/etc/init_trigger.disabled:system/etc/init_trigger.disabled \
     vendor/TeamDRH/prebuilt/common/etc/init_d.bsh:system/etc/init_d.bsh \
+    vendor/TeamDRH/prebuilt/common/etc/init_d.cfg:system/etc/init_d.cfg \
     vendor/TeamDRH/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf    
 
 # cron support
