@@ -22,5 +22,4 @@
     <string name="english_ime_name">TeamDRH keyboard</string>
     <!-- Title for Latin keyboard settings activity / dialog -->
     <string name="english_ime_settings">TeamDRH keyboard settings</string>
-    <string name="aokp_category">TeamDRH Keyboard Options</string>
 </resources>
