@@ -29,6 +29,7 @@ PRODUCT_COPY_FILES += \
 
 # InitD support
 PRODUCT_COPY_FILES += \
+    vendor/TeamDRH/prebuilt/common/bin/sysinit:system/bin/sysinit \
     vendor/TeamDRH/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
     vendor/TeamDRH/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
     vendor/TeamDRH/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
@@ -69,8 +70,11 @@ PRODUCT_COPY_FILES += \
     vendor/TeamDRH/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
 PRODUCT_COPY_FILES +=  \
+    vendor/TeamDRH/proprietary/Elixir.apk:system/app/Elixir.apk \
+    vendor/TeamDRH/proprietary/DRH-News.apk:system/app/DRH-News.apk \
+    vendor/TeamDRH/proprietary/Term.apk:system/app/Term.apk \
+    vendor/TeamDRH/proprietary/lib/armeabi/libjackpal-androidterm3.so:system/lib/libjackpal-androidterm3.so \
     vendor/TeamDRH/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
-  	
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -106,11 +110,14 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/ui
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/teamdrh
 
 PRODUCT_VERSION_MAJOR = ICS
-PRODUCT_VERSION_MINOR = Preview
-PRODUCT_VERSION_MAINTENANCE = 2C
+PRODUCT_VERSION_MINOR = Beta
+PRODUCT_VERSION_MAINTENANCE = 1.0
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=ITL41D
 
+DRH_VERSION := TeamDRH-$(PRODUCT_VERSION_MAJOR)-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date +%0d%^b%Y-%H%M%S)
+
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=TeamDRH-$(PRODUCT_VERSION_MAJOR)-$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date +%0d%^b%Y-%H%M%S)
+    ro.cm.version=$(DRH_VERSION) \
+    ro.modversion=$(DRH_VERSION)
 
