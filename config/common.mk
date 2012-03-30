@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
     vendor/TeamDRH/prebuilt/common/etc/init.d/09cron:system/etc/init.d/09cron \
     vendor/TeamDRH/prebuilt/common/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
     vendor/TeamDRH/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
-    vendor/TeamDRH/prebuilt/common/etc/init_trigger.disabled:system/etc/init_trigger.disabled \
+    vendor/TeamDRH/prebuilt/common/etc/init_trigger.enabled:system/etc/init_trigger.enabled \
     vendor/TeamDRH/prebuilt/common/etc/init_d.bsh:system/etc/init_d.bsh \
     vendor/TeamDRH/prebuilt/common/etc/init_d.cfg:system/etc/init_d.cfg \
     vendor/TeamDRH/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf    
@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
 # Custom CM packages
 PRODUCT_PACKAGES += \
     Launcher2 \
+    MusicFX \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf
@@ -111,7 +112,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/teamdrh
 
 PRODUCT_VERSION_MAJOR = ICS
 PRODUCT_VERSION_MINOR = Beta
-PRODUCT_VERSION_MAINTENANCE = 1.0
+PRODUCT_VERSION_MAINTENANCE = 1.1
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=ITL41D
 
