@@ -84,7 +84,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Development \
     LatinIME \
-    ROMControl \
+    DRHControl \
     SpareParts \
     Superuser \
     su
