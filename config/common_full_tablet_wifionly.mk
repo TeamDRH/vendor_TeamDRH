@@ -2,10 +2,16 @@
 $(call inherit-product, vendor/TeamDRH/config/common.mk)
 
 # Bring in all audio files
-include frameworks/base/data/sounds/AllAudio.mk
+include frameworks/base/data/sounds/NewAudio.mk
+
+# Extra Ringtones
+include frameworks/base/data/sounds/AudioPackageNewWave.mk
+
+# Include CM audio files
+include vendor/cm/config/cm_audio.mk
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Playa.ogg \
-    ro.config.notification_sound=regulus.ogg \
-    ro.config.alarm_alert=Alarm_Beep_03.ogg
+    ro.config.ringtone=CyanTone.ogg \
+    ro.config.notification_sound=CyanMessage.ogg \
+    ro.config.alarm_alert=CyanAlarm.ogg
