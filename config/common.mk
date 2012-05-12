@@ -80,6 +80,9 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# T-Mobile theme engine
+include vendor/TeamDRH/config/themes_common.mk
+
 # Required CM packages
 PRODUCT_PACKAGES += \
     Development \
@@ -112,7 +115,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/teamdrh
 
 PRODUCT_VERSION_MAJOR = ICS
 PRODUCT_VERSION_MINOR = Beta
-PRODUCT_VERSION_MAINTENANCE = 1.2
+PRODUCT_VERSION_MAINTENANCE = 1.3
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=IMM76D
 
