@@ -106,7 +106,8 @@ PRODUCT_PACKAGES += \
     MusicFX \
     DSPManager \
     libcyanogen-dsp \
-    audio_effects.conf
+    audio_effects.conf \
+    Apollo
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/TeamDRH/overlay/common
